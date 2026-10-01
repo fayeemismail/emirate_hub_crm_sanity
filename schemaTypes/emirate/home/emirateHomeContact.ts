@@ -64,6 +64,20 @@ export const emirateHomeContact = defineType({
       description: 'Color of the form description subtitle.',
     }),
     defineField({
+      name: 'submitButtonBackgroundColor',
+      title: 'Submit Button Background Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Color of the contact form submit button background.',
+    }),
+    defineField({
+      name: 'submitButtonTextColor',
+      title: 'Submit Button Text Color',
+      type: 'hexColor',
+      initialValue: '#FFFFFF',
+      description: 'Color of the contact form submit button text.',
+    }),
+    defineField({
       name: 'badge',
       title: 'Section Badge',
       type: 'string',

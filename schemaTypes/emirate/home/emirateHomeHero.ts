@@ -50,6 +50,20 @@ export const emirateHomeHero = defineType({
       description: 'Color of the supporting description paragraph.',
     }),
     defineField({
+      name: 'buttonBackgroundColor',
+      title: 'CTA Button Background Color',
+      type: 'hexColor',
+      initialValue: '#07172E',
+      description: 'Background color of the hero CTA button.',
+    }),
+    defineField({
+      name: 'buttonTextColor',
+      title: 'CTA Button Text Color',
+      type: 'hexColor',
+      initialValue: '#FFFFFF',
+      description: 'Text color of the hero CTA button.',
+    }),
+    defineField({
       name: 'backgroundImage',
       title: 'Primary Panorama Background Image',
       type: 'image',

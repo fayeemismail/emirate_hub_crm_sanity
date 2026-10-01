@@ -131,10 +131,34 @@ export const emirateHomePricing = defineType({
               description: 'Color of features, tagline, and labels on this card.',
             }),
             defineField({
+              name: 'featuresTextColor',
+              title: 'Features List Text Color (Override)',
+              type: 'hexColor',
+              description: 'Custom color for checklist items on this card.',
+            }),
+            defineField({
               name: 'priceColor',
               title: 'Card Price Color (Override)',
               type: 'hexColor',
               description: 'Color of the currency and price amount.',
+            }),
+            defineField({
+              name: 'buttonBackgroundColor',
+              title: 'Button Background Color (Override)',
+              type: 'hexColor',
+              description: 'Custom button background color (e.g. #FFFFFF or #111827).',
+            }),
+            defineField({
+              name: 'buttonTextColor',
+              title: 'Button Text Color (Override)',
+              type: 'hexColor',
+              description: 'Custom button text color (e.g. #111827 or #FFFFFF).',
+            }),
+            defineField({
+              name: 'buttonBorderColor',
+              title: 'Button Border Color (Override)',
+              type: 'hexColor',
+              description: 'Custom button border color (e.g. #111827 or #FFFFFF).',
             }),
 
             defineField({

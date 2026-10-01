@@ -8,6 +8,19 @@ export const emirateNavbar = defineType({
   icon: MenuIcon,
   fields: [
     defineField({
+      name: 'logo',
+      title: 'Navbar Logo',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Logo shown at the top-left of the header. Transparent PNG or SVG recommended.',
+    }),
+    defineField({
+      name: 'logoAlt',
+      title: 'Logo Alt Text',
+      type: 'string',
+      initialValue: 'Emirate Hub',
+    }),
+    defineField({
       name: 'backgroundColor',
       title: 'Navbar Background Color',
       type: 'hexColor',
@@ -88,11 +101,13 @@ export const emirateNavbar = defineType({
   preview: {
     select: {
       phone: 'phone',
+      media: 'logo',
     },
-    prepare({ phone }) {
+    prepare({ phone, media }) {
       return {
         title: 'Header & Navigation Bar',
         subtitle: `Phone: ${phone || 'Not set'}`,
+        media,
       }
     },
   },

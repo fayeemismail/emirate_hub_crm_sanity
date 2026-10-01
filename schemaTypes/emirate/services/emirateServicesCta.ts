@@ -43,6 +43,20 @@ export const emirateServicesCta = defineType({
       description: 'Color of the supporting description paragraph.',
     }),
     defineField({
+      name: 'buttonBackgroundColor',
+      title: 'Button Background Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Background color of the CTA button.',
+    }),
+    defineField({
+      name: 'buttonTextColor',
+      title: 'Button Text Color',
+      type: 'hexColor',
+      initialValue: '#FFFFFF',
+      description: 'Text color of the CTA button.',
+    }),
+    defineField({
       name: 'tag',
       title: 'Tagline Badge',
       type: 'string',

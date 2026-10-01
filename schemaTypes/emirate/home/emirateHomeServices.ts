@@ -121,6 +121,18 @@ export const emirateHomeServices = defineType({
               validation: (Rule) => Rule.required(),
             }),
             defineField({
+              name: 'cardBackgroundColor',
+              title: 'Card Background Color (Override)',
+              type: 'hexColor',
+              description: 'Custom background color for this service card (defaults to #18181B dark surface).',
+            }),
+            defineField({
+              name: 'cardTagColor',
+              title: 'Card Tag Color (Override)',
+              type: 'hexColor',
+              description: 'Color of the category tag badge on this card (defaults to #E02126).',
+            }),
+            defineField({
               name: 'cardTitleColor',
               title: 'Card Title Color (Override)',
               type: 'hexColor',

@@ -116,6 +116,30 @@ export const emirateAdditionalServicesSection = defineType({
               rows: 3,
             }),
             defineField({
+              name: 'cardBackgroundColor',
+              title: 'Card Background Color (Override)',
+              type: 'hexColor',
+              description: 'Custom background color for this card (defaults to #18181B).',
+            }),
+            defineField({
+              name: 'cardBadgeColor',
+              title: 'Card Badge Color (Override)',
+              type: 'hexColor',
+              description: 'Custom color for the category badge text/border.',
+            }),
+            defineField({
+              name: 'cardTitleColor',
+              title: 'Card Title Color (Override)',
+              type: 'hexColor',
+              description: 'Color of this service title.',
+            }),
+            defineField({
+              name: 'cardTextColor',
+              title: 'Card Description Color (Override)',
+              type: 'hexColor',
+              description: 'Color of this service description text.',
+            }),
+            defineField({
               name: 'featuresHeading',
               title: 'Features Heading',
               type: 'string',
@@ -138,6 +162,18 @@ export const emirateAdditionalServicesSection = defineType({
               title: 'Button URL',
               type: 'string',
               initialValue: '/#contact-us',
+            }),
+            defineField({
+              name: 'buttonBackgroundColor',
+              title: 'Button Background Color (Override)',
+              type: 'hexColor',
+              description: 'Custom button background color.',
+            }),
+            defineField({
+              name: 'buttonTextColor',
+              title: 'Button Text Color (Override)',
+              type: 'hexColor',
+              description: 'Custom button text color.',
             }),
           ],
           preview: {

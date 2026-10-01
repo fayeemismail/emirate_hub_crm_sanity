@@ -91,6 +91,20 @@ export const emirateCorporateService = defineType({
       description: 'Color of bullet points in the features list.',
     }),
     defineField({
+      name: 'buttonBackgroundColor',
+      title: 'Button Background Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Color of the service enquiry button background.',
+    }),
+    defineField({
+      name: 'buttonTextColor',
+      title: 'Button Text Color',
+      type: 'hexColor',
+      initialValue: '#FFFFFF',
+      description: 'Color of the service enquiry button text.',
+    }),
+    defineField({
       name: 'image',
       title: 'Service Image',
       type: 'image',
