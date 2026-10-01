@@ -16,5 +16,27 @@ export const templateConfig = {
     'footer',
     'themeSettings',
     'dashboardConfig',
+
+    // Emirate Hub Public Website Singletons
+    'emirateHomeHero',
+    'emirateHomePricing',
+    'emirateHomeServices',
+    'emirateHomeContact',
+    'emirateHomeTestimonials',
+    'emirateHomeBlogSection',
+    'emirateHomeFaq',
+    'emirateAboutHero',
+    'emirateAboutVision',
+    'emirateAboutLocation',
+    'emirateBlogHero',
+    'emirateBlogSettings',
+    'emirateServicesHero',
+    'emirateAdditionalServicesSection',
+    'emirateServicesFaq',
+    'emirateServicesCta',
+    'emirateNavbar',
+    'emirateFooter',
+    'emirateContactConfig',
   ],
 }
+

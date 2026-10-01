@@ -34,6 +34,9 @@ import { leadPriority } from './documents/leadPriority'
 import { themeSettings } from './documents/themeSettings'
 import { dashboardConfig } from './documents/dashboardConfig'
 
+// Emirate Hub Public Website Schemas
+import { emirateSchemas } from './emirate'
+
 export const schemaTypes: SchemaTypeDefinition[] = [
   // Primitive Objects
   hexColor,
@@ -68,4 +71,8 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   leadPriority,
   themeSettings,
   dashboardConfig,
+
+  // Emirate Hub Public Frontend Schemas
+  ...emirateSchemas,
 ]
+
