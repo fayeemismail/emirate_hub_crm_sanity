@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Sanity Studio runtime & build output
+.sanity/
+dist/
+schema.json
+sanity.types.ts
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# Logs & OS artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db

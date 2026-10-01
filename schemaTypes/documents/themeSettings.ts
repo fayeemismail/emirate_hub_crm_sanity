@@ -1,0 +1,366 @@
+import { DropIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
+
+export const themeSettings = defineType({
+  name: 'themeSettings',
+  title: 'Theme & Color System Settings',
+  type: 'document',
+  icon: DropIcon,
+  fieldsets: [
+    {
+      name: 'backgrounds',
+      title: '1. App & Dashboard Backgrounds',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'sidebar',
+      title: '2. Sidebar & Navigation Colors',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'cards',
+      title: '3. Cards & Surfaces',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'typography',
+      title: '4. Typography & Text Colors',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'accents',
+      title: '5. Brand Accent & Status Colors',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'priorities',
+      title: '6. Inquiry Priority Badges',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'buttons',
+      title: '7. Button Colors & States',
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: 'pills',
+      title: '8. Pill & Badge Styling',
+      options: { collapsible: true, collapsed: false },
+    },
+  ],
+  fields: [
+    // --- 1. APP & DASHBOARD BACKGROUNDS ---
+    defineField({
+      name: 'bgMain',
+      title: 'Main App Background Color',
+      type: 'hexColor',
+      fieldset: 'backgrounds',
+      description: 'Primary dark background base for the application.',
+      initialValue: '#07172E',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'bgGradientTop',
+      title: 'Dashboard Gradient Top Stop',
+      type: 'hexColor',
+      fieldset: 'backgrounds',
+      description: 'Top color stop for the executive background gradient.',
+      initialValue: '#081D39',
+    }),
+    defineField({
+      name: 'bgGradientMiddle',
+      title: 'Dashboard Gradient Middle Stop',
+      type: 'hexColor',
+      fieldset: 'backgrounds',
+      description: 'Middle color stop for the executive background gradient.',
+      initialValue: '#0B2548',
+    }),
+    defineField({
+      name: 'bgGradientBottom',
+      title: 'Dashboard Gradient Bottom Stop',
+      type: 'hexColor',
+      fieldset: 'backgrounds',
+      description: 'Bottom color stop for the executive background gradient.',
+      initialValue: '#061326',
+    }),
+    defineField({
+      name: 'headerBg',
+      title: 'Top Header Bar Background',
+      type: 'hexColor',
+      fieldset: 'backgrounds',
+      description: 'Background color for top sticky header bar.',
+      initialValue: '#081E3A',
+    }),
+
+    // --- 2. SIDEBAR & NAVIGATION COLORS ---
+    defineField({
+      name: 'sidebarBgStart',
+      title: 'Sidebar Gradient Start',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      description: 'Sidebar top background gradient color.',
+      initialValue: '#081D39',
+    }),
+    defineField({
+      name: 'sidebarBgMiddle',
+      title: 'Sidebar Gradient Middle',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      description: 'Sidebar middle background gradient color.',
+      initialValue: '#071830',
+    }),
+    defineField({
+      name: 'sidebarBgEnd',
+      title: 'Sidebar Gradient End',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      description: 'Sidebar bottom background gradient color.',
+      initialValue: '#051224',
+    }),
+    defineField({
+      name: 'sidebarBorder',
+      title: 'Sidebar Border Color',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      description: 'Right border divider for sidebar.',
+      initialValue: '#93C5FD33',
+    }),
+    defineField({
+      name: 'sidebarActiveItemBgStart',
+      title: 'Sidebar Active Item Gradient Start',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      initialValue: '#2563EB',
+    }),
+    defineField({
+      name: 'sidebarActiveItemBgEnd',
+      title: 'Sidebar Active Item Gradient End',
+      type: 'hexColor',
+      fieldset: 'sidebar',
+      initialValue: '#0284C7',
+    }),
+
+    // --- 3. CARDS & SURFACES ---
+    defineField({
+      name: 'cardBg',
+      title: 'Card Surface Background',
+      type: 'hexColor',
+      fieldset: 'cards',
+      description: 'Background color for executive glassmorphism cards.',
+      initialValue: '#0D284C',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'cardBorder',
+      title: 'Card Border Color',
+      type: 'hexColor',
+      fieldset: 'cards',
+      description: 'Subtle border stroke around cards.',
+      initialValue: '#93C5FD38',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'cardHoverBorder',
+      title: 'Card Hover Border Highlight',
+      type: 'hexColor',
+      fieldset: 'cards',
+      description: 'Border glowing highlight when user hovers over card.',
+      initialValue: '#38BDF880',
+    }),
+    defineField({
+      name: 'innerCardBg',
+      title: 'Inner Container / Nested Card Background',
+      type: 'hexColor',
+      fieldset: 'cards',
+      description: 'Background for inner nested lists and sub-boxes.',
+      initialValue: '#07162DBF',
+    }),
+
+    // --- 4. TYPOGRAPHY & TEXT COLORS ---
+    defineField({
+      name: 'textPrimary',
+      title: 'Primary Text Color',
+      type: 'hexColor',
+      fieldset: 'typography',
+      description: 'Main heading and crisp white text.',
+      initialValue: '#FFFFFF',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'textSecondary',
+      title: 'Secondary Text Color',
+      type: 'hexColor',
+      fieldset: 'typography',
+      description: 'Subtitles and secondary text (Luminous Sky Blue).',
+      initialValue: '#BAE6FD',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'textMuted',
+      title: 'Muted Text Color',
+      type: 'hexColor',
+      fieldset: 'typography',
+      description: 'Soft powder blue for timestamps, meta details, and placeholders.',
+      initialValue: '#93C5FD',
+      validation: (Rule) => Rule.required(),
+    }),
+
+    // --- 5. BRAND ACCENT & STATUS COLORS ---
+    defineField({
+      name: 'accentPrimary',
+      title: 'Primary Brand Accent (Sapphire)',
+      type: 'hexColor',
+      fieldset: 'accents',
+      initialValue: '#0284C7',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'accentSky',
+      title: 'Sky Blue Highlight Accent',
+      type: 'hexColor',
+      fieldset: 'accents',
+      initialValue: '#38BDF8',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'successColor',
+      title: 'Success / Resolved Color (Emerald)',
+      type: 'hexColor',
+      fieldset: 'accents',
+      initialValue: '#10B981',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'warningColor',
+      title: 'Warning / In-Progress Color (Amber)',
+      type: 'hexColor',
+      fieldset: 'accents',
+      initialValue: '#F59E0B',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'dangerColor',
+      title: 'Danger / High-Alert Color (Rose)',
+      type: 'hexColor',
+      fieldset: 'accents',
+      initialValue: '#F43F5E',
+      validation: (Rule) => Rule.required(),
+    }),
+
+    // --- 6. INQUIRY PRIORITY BADGES ---
+    defineField({
+      name: 'priorityHighColor',
+      title: 'High Priority Text Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#FCA5A5',
+    }),
+    defineField({
+      name: 'priorityHighBg',
+      title: 'High Priority Background Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#F43F5E26',
+    }),
+    defineField({
+      name: 'priorityMediumColor',
+      title: 'Medium Priority Text Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#FCD34D',
+    }),
+    defineField({
+      name: 'priorityMediumBg',
+      title: 'Medium Priority Background Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#F59E0B26',
+    }),
+    defineField({
+      name: 'priorityLowColor',
+      title: 'Low Priority Text Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#BAE6FD',
+    }),
+    defineField({
+      name: 'priorityLowBg',
+      title: 'Low Priority Background Color',
+      type: 'hexColor',
+      fieldset: 'priorities',
+      initialValue: '#0284C726',
+    }),
+
+    // --- 7. BUTTON COLORS & STATES ---
+    defineField({
+      name: 'primaryButtonBg',
+      title: 'Primary Button Background',
+      type: 'hexColor',
+      fieldset: 'buttons',
+      initialValue: '#2563EB',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'primaryButtonTxt',
+      title: 'Primary Button Text Color',
+      type: 'hexColor',
+      fieldset: 'buttons',
+      initialValue: '#FFFFFF',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'primaryButtonHover',
+      title: 'Primary Button Hover Background',
+      type: 'hexColor',
+      fieldset: 'buttons',
+      initialValue: '#1D4ED8',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'secondaryButtonBg',
+      title: 'Secondary Button Background',
+      type: 'hexColor',
+      fieldset: 'buttons',
+      initialValue: '#0D284C',
+    }),
+    defineField({
+      name: 'secondaryButtonTxt',
+      title: 'Secondary Button Text Color',
+      type: 'hexColor',
+      fieldset: 'buttons',
+      initialValue: '#BAE6FD',
+    }),
+
+    // --- 8. PILL & BADGE STYLING ---
+    defineField({
+      name: 'pillBg',
+      title: 'Pill Background Color',
+      type: 'hexColor',
+      fieldset: 'pills',
+      initialValue: '#38BDF826',
+    }),
+    defineField({
+      name: 'pillBorder',
+      title: 'Pill Border Color',
+      type: 'hexColor',
+      fieldset: 'pills',
+      initialValue: '#38BDF84D',
+    }),
+    defineField({
+      name: 'pillTxtColor',
+      title: 'Pill Text Color',
+      type: 'hexColor',
+      fieldset: 'pills',
+      initialValue: '#38BDF8',
+    }),
+  ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Theme & Color Settings',
+        subtitle:
+          'Executive Office Blue palette with interactive color picker and direct hex inputs',
+      }
+    },
+  },
+})
