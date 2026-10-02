@@ -11,12 +11,6 @@ export const templateConfig = {
   defaultApiVersion: '2024-03-01',
   fallbackProjectId: 'placeholder-project-id',
   singletonDocumentTypes: [
-    'siteSettings',
-    'navigation',
-    'footer',
-    'themeSettings',
-    'dashboardConfig',
-
     // Emirate Hub Public Website Singletons
     'emirateHomeHero',
     'emirateHomePricing',

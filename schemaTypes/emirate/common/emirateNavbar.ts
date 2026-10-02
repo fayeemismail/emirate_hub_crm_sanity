@@ -35,6 +35,13 @@ export const emirateNavbar = defineType({
       description: 'Text color of the navigation menu items.',
     }),
     defineField({
+      name: 'activeLinkColor',
+      title: 'Active Navigation Link Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Highlight color for the active / currently visited page link in the navbar (defaults to #E02126).',
+    }),
+    defineField({
       name: 'phoneColor',
       title: 'Phone Number Color',
       type: 'hexColor',

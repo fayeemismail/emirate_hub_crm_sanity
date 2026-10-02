@@ -222,6 +222,12 @@ export const emirateHomePricing = defineType({
               type: 'string',
               initialValue: '/#contact-us',
             }),
+            defineField({
+              name: 'serviceSlug',
+              title: 'Service Slug (for Contact Form)',
+              type: 'string',
+              description: 'The slug of the corresponding service (e.g. business-incorporation). Sent to the backend when this plan is enquired.',
+            }),
           ],
           preview: {
             select: {

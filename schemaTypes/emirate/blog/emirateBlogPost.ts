@@ -38,6 +38,13 @@ export const emirateBlogPost = defineType({
       description: 'Highlight as a top story or hero card.',
     }),
     defineField({
+      name: 'order',
+      title: 'Display Order / Priority',
+      type: 'number',
+      description: 'Numeric sorting order (e.g. 10, 20, 30). Lower numbers appear first.',
+      initialValue: 100,
+    }),
+    defineField({
       name: 'backgroundColor',
       title: 'Article Page Background Color',
       type: 'hexColor',

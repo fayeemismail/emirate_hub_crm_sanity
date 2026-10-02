@@ -140,6 +140,13 @@ export const emirateHomeHero = defineType({
       type: 'string',
       initialValue: '/#contact-us',
     }),
+    defineField({
+      name: 'serviceSlug',
+      title: 'Target Service Slug (for Contact Form)',
+      type: 'string',
+      initialValue: 'business-incorporation',
+      description: 'The service slug automatically selected in the contact form when clicking Request Information (e.g. business-incorporation).',
+    }),
   ],
   preview: {
     select: {
