@@ -54,6 +54,20 @@ export const emirateNavbar = defineType({
       initialValue: 'https://wa.me/971509432297',
     }),
     defineField({
+      name: 'mobileIconColor',
+      title: 'Mobile / Phone Call Icon Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Background color of the sticky mobile/phone call button at bottom right (defaults to #E02126).',
+    }),
+    defineField({
+      name: 'whatsappIconColor',
+      title: 'WhatsApp Icon Color',
+      type: 'hexColor',
+      initialValue: '#25D366',
+      description: 'Background color of the sticky WhatsApp button at bottom right (defaults to #25D366).',
+    }),
+    defineField({
       name: 'ctaText',
       title: 'CTA Button Text',
       type: 'string',
