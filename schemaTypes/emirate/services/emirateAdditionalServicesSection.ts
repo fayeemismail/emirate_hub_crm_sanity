@@ -110,6 +110,13 @@ export const emirateAdditionalServicesSection = defineType({
               validation: (Rule) => Rule.required(),
             }),
             defineField({
+              name: 'active',
+              title: 'Service Active',
+              type: 'boolean',
+              initialValue: true,
+              description: 'Toggle visibility and availability of this additional service.',
+            }),
+            defineField({
               name: 'description',
               title: 'Description',
               type: 'text',
