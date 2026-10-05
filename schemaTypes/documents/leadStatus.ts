@@ -86,6 +86,22 @@ export const leadStatus = defineType({
       description: 'Whether this status stage is enabled in the active CRM pipeline.',
       initialValue: true,
     }),
+    defineField({
+      name: 'outcome',
+      title: 'Analytics Outcome',
+      type: 'string',
+      description:
+        'Marks this stage for win-rate KPIs. Use Won / Lost for terminal closed stages. Leave as None for open pipeline stages.',
+      options: {
+        list: [
+          { title: 'None (open stage)', value: 'none' },
+          { title: 'Won', value: 'won' },
+          { title: 'Lost', value: 'lost' },
+        ],
+        layout: 'radio',
+      },
+      initialValue: 'none',
+    }),
   ],
   orderings: [
     {
