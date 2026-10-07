@@ -31,6 +31,16 @@ import { emirateNavbar } from './common/emirateNavbar'
 import { emirateFooter } from './common/emirateFooter'
 import { emirateContactConfig } from './common/emirateContactConfig'
 
+// SEO, Google Analytics & Google Tag Manager Schemas
+import {
+  emirateGlobalSeo,
+  emirateHomeSeo,
+  emirateAboutSeo,
+  emirateServicesSeo,
+  emirateBlogSeo,
+  emirateContactSeo,
+} from './seo'
+
 export const emirateSchemas: SchemaTypeDefinition[] = [
   // Home
   emirateHomeHero,
@@ -62,6 +72,14 @@ export const emirateSchemas: SchemaTypeDefinition[] = [
   emirateNavbar,
   emirateFooter,
   emirateContactConfig,
+
+  // SEO & Analytics
+  emirateGlobalSeo,
+  emirateHomeSeo,
+  emirateAboutSeo,
+  emirateServicesSeo,
+  emirateBlogSeo,
+  emirateContactSeo,
 ]
 
 export {
@@ -86,4 +104,10 @@ export {
   emirateNavbar,
   emirateFooter,
   emirateContactConfig,
+  emirateGlobalSeo,
+  emirateHomeSeo,
+  emirateAboutSeo,
+  emirateServicesSeo,
+  emirateBlogSeo,
+  emirateContactSeo,
 }

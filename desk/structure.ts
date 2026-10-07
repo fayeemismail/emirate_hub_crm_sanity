@@ -13,6 +13,8 @@ import {
   MenuIcon,
   ComponentIcon,
   ControlsIcon,
+  EarthGlobeIcon,
+  SearchIcon,
 } from '@sanity/icons'
 import { StructureResolver } from 'sanity/structure'
 
@@ -38,6 +40,14 @@ const singletonTypes = new Set([
   'emirateNavbar',
   'emirateFooter',
   'emirateContactConfig',
+
+  // SEO & Analytics Singletons
+  'emirateGlobalSeo',
+  'emirateHomeSeo',
+  'emirateAboutSeo',
+  'emirateServicesSeo',
+  'emirateBlogSeo',
+  'emirateContactSeo',
 ])
 
 export const structure: StructureResolver = (S) =>
@@ -190,6 +200,41 @@ export const structure: StructureResolver = (S) =>
                         .title('Contact Form Options')
                         .icon(ControlsIcon)
                         .child(S.document().schemaType('emirateContactConfig').documentId('emirateContactConfig')),
+                    ])
+                ),
+
+              // SEO & Analytics Configuration Group
+              S.listItem()
+                .title('SEO & Analytics Configuration')
+                .icon(SearchIcon)
+                .child(
+                  S.list()
+                    .title('SEO & Analytics Settings')
+                    .items([
+                      S.listItem()
+                        .title('Global SEO, GA4 & GTM')
+                        .icon(EarthGlobeIcon)
+                        .child(S.document().schemaType('emirateGlobalSeo').documentId('emirateGlobalSeo')),
+                      S.listItem()
+                        .title('Home Page SEO')
+                        .icon(SparklesIcon)
+                        .child(S.document().schemaType('emirateHomeSeo').documentId('emirateHomeSeo')),
+                      S.listItem()
+                        .title('About Us Page SEO')
+                        .icon(InfoOutlineIcon)
+                        .child(S.document().schemaType('emirateAboutSeo').documentId('emirateAboutSeo')),
+                      S.listItem()
+                        .title('Services Page SEO')
+                        .icon(CogIcon)
+                        .child(S.document().schemaType('emirateServicesSeo').documentId('emirateServicesSeo')),
+                      S.listItem()
+                        .title('Blog Page SEO')
+                        .icon(DocumentTextIcon)
+                        .child(S.document().schemaType('emirateBlogSeo').documentId('emirateBlogSeo')),
+                      S.listItem()
+                        .title('Contact Advisory SEO')
+                        .icon(UsersIcon)
+                        .child(S.document().schemaType('emirateContactSeo').documentId('emirateContactSeo')),
                     ])
                 ),
             ])
