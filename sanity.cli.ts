@@ -6,6 +6,7 @@ export default defineCliConfig({
     projectId,
     dataset,
   },
+  studioHost: 'emiratehub',
   vite: (config: any) => ({
     ...config,
     envPrefix: ['SANITY_STUDIO_', 'NEXT_PUBLIC_'],

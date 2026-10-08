@@ -9,7 +9,7 @@ export const templateConfig = {
   defaultStudioTitle: 'Emirate Hub Studio',
   defaultDataset: 'production',
   defaultApiVersion: '2024-03-01',
-  fallbackProjectId: 'placeholder-project-id',
+  fallbackProjectId: 'yqweaq94',
   singletonDocumentTypes: [
     // Emirate Hub Public Website Singletons
     'emirateHomeHero',
@@ -33,4 +33,3 @@ export const templateConfig = {
     'emirateContactConfig',
   ],
 }
-
