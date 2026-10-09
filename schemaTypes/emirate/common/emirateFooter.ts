@@ -8,6 +8,21 @@ export const emirateFooter = defineType({
   icon: ComponentIcon,
   fields: [
     defineField({
+      name: 'logo',
+      title: 'Footer Logo',
+      type: 'image',
+      options: { hotspot: true },
+      description:
+        'Logo shown in the footer brand column. Transparent PNG or SVG recommended. If not uploaded, defaults to /images/logo.png.',
+    }),
+    defineField({
+      name: 'logoAlt',
+      title: 'Logo Alt Text',
+      type: 'string',
+      initialValue: 'Emirate Hub',
+      description: 'Alternative text for the footer logo for accessibility and SEO.',
+    }),
+    defineField({
       name: 'backgroundColor',
       title: 'Footer Background Color',
       type: 'hexColor',
@@ -215,11 +230,13 @@ export const emirateFooter = defineType({
   preview: {
     select: {
       title: 'copyrightText',
+      media: 'logo',
     },
-    prepare({ title }) {
+    prepare({ title, media }) {
       return {
         title: 'Footer Configuration',
         subtitle: title || '© Emirate Hub Corporate Services',
+        media,
       }
     },
   },
