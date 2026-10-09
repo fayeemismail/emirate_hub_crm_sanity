@@ -18,34 +18,35 @@ export const emirateNavbar = defineType({
       name: 'logoAlt',
       title: 'Logo Alt Text',
       type: 'string',
-      initialValue: 'Emirate Hub',
+      initialValue: 'emirate-logo',
     }),
     defineField({
       name: 'backgroundColor',
       title: 'Navbar Background Color',
       type: 'hexColor',
-      initialValue: '#000000',
+      initialValue: '#E2E8F0',
       description: 'Background color of the header navbar.',
     }),
     defineField({
       name: 'linkColor',
       title: 'Navigation Links Color',
       type: 'hexColor',
-      initialValue: '#FFFFFF',
+      initialValue: '#000000',
       description: 'Text color of the navigation menu items.',
     }),
     defineField({
       name: 'activeLinkColor',
       title: 'Active Navigation Link Color',
       type: 'hexColor',
-      initialValue: '#E02126',
-      description: 'Highlight color for the active / currently visited page link in the navbar (defaults to #E02126).',
+      initialValue: '#C62F34',
+      description:
+        'Highlight color for the active / currently visited page link in the navbar (defaults to #E02126).',
     }),
     defineField({
       name: 'phoneColor',
       title: 'Phone Number Color',
       type: 'hexColor',
-      initialValue: '#FFFFFF',
+      initialValue: '#000000',
       description: 'Color of the top phone number text.',
     }),
     defineField({
@@ -65,14 +66,16 @@ export const emirateNavbar = defineType({
       title: 'Mobile / Phone Call Icon Color',
       type: 'hexColor',
       initialValue: '#E02126',
-      description: 'Background color of the sticky mobile/phone call button at bottom right (defaults to #E02126).',
+      description:
+        'Background color of the sticky mobile/phone call button at bottom right (defaults to #E02126).',
     }),
     defineField({
       name: 'whatsappIconColor',
       title: 'WhatsApp Icon Color',
       type: 'hexColor',
       initialValue: '#25D366',
-      description: 'Background color of the sticky WhatsApp button at bottom right (defaults to #25D366).',
+      description:
+        'Background color of the sticky WhatsApp button at bottom right (defaults to #25D366).',
     }),
     defineField({
       name: 'ctaText',
