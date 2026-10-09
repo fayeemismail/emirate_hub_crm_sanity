@@ -30,25 +30,62 @@ export const emirateFooter = defineType({
       description: 'Background color of the website footer.',
     }),
     defineField({
+      name: 'columnTitleColor',
+      title: 'Column Titles Color (Quick Links, Core Services, etc.)',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description:
+        'Accent color for column headings like Quick Links, Core Services, and Working Hours (defaults to #E02126).',
+    }),
+    defineField({
       name: 'headingColor',
-      title: 'Headings & Titles Color',
+      title: 'Headings & Card Titles Color',
       type: 'hexColor',
       initialValue: '#FFFFFF',
-      description: 'Color of column headings and card titles in the footer.',
+      description: 'Color of card titles (e.g. Head Office) and section subheadings in the footer.',
     }),
     defineField({
       name: 'textColor',
       title: 'Description & Body Text Color',
       type: 'hexColor',
       initialValue: '#9CA3AF',
-      description: 'Color of brand description and general body text.',
+      description:
+        'Color of brand description, office address, working hours, and general body text.',
     }),
     defineField({
       name: 'linkColor',
       title: 'Footer Links Color',
       type: 'hexColor',
       initialValue: '#D1D5DB',
-      description: 'Color of quick links and core services links.',
+      description: 'Color of quick links, core services links, and legal links.',
+    }),
+    defineField({
+      name: 'contactTextColor',
+      title: 'Direct Contact (Phone & Email) Text Color',
+      type: 'hexColor',
+      initialValue: '#D1D5DB',
+      description:
+        'Text color of the direct phone number and email address located under the office card.',
+    }),
+    defineField({
+      name: 'contactIconColor',
+      title: 'Direct Contact (Phone & Email) Icon Color',
+      type: 'hexColor',
+      initialValue: '#E02126',
+      description: 'Color of the phone and email icons beside the direct contact details.',
+    }),
+    defineField({
+      name: 'officeCardBg',
+      title: 'Office Location Card Background Color',
+      type: 'hexColor',
+      description:
+        'Optional custom background color for the head office location card (e.g. #FFFFFF or dark tint).',
+    }),
+    defineField({
+      name: 'officeCardBorder',
+      title: 'Office Location Card Border Color',
+      type: 'hexColor',
+      description: 'Optional custom border color for the head office location card.',
     }),
     defineField({
       name: 'copyrightColor',
@@ -56,6 +93,13 @@ export const emirateFooter = defineType({
       type: 'hexColor',
       initialValue: '#6B7280',
       description: 'Color of the bottom copyright notice text.',
+    }),
+    defineField({
+      name: 'socialIconColor',
+      title: 'Social Icons & Label Color',
+      type: 'hexColor',
+      initialValue: '#9CA3AF',
+      description: 'Color of social media icons and the "Connect with us" label at the bottom.',
     }),
     defineField({
       name: 'description',
