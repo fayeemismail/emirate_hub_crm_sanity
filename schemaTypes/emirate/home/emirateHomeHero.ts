@@ -75,7 +75,8 @@ export const emirateHomeHero = defineType({
       title: 'Additional Panorama Loop Images',
       type: 'array',
       of: [{ type: 'image', options: { hotspot: true } }],
-      description: 'Sequential panorama stills (Marina, Abu Dhabi, Creek) used for seamless looping.',
+      description:
+        'Sequential panorama stills (Marina, Abu Dhabi, Creek) used for seamless looping.',
     }),
     defineField({
       name: 'heading',
@@ -104,13 +105,21 @@ export const emirateHomeHero = defineType({
           name: 'highlightedText',
           title: 'Highlighted Keyword Text',
           type: 'string',
-          initialValue: 'UAE business license',
+          initialValue: 'the Emirates way',
+        }),
+        defineField({
+          name: 'highlightedBoldKeyword',
+          title: 'Bold Keyword within Highlighted Text (Italic & Extra Bold)',
+          type: 'string',
+          initialValue: 'Emirates',
+          description:
+            'Specific word inside the Highlighted Text to render in extra bold & italic while retaining the highlight color (e.g. "Emirates"). You can also use markdown **word** directly in Highlighted Text, or set to "none" for highlight color only without extra bold.',
         }),
         defineField({
           name: 'suffix',
           title: 'Heading Suffix',
           type: 'string',
-          initialValue: ' ends here.',
+          initialValue: '',
         }),
       ],
     }),
@@ -118,7 +127,8 @@ export const emirateHomeHero = defineType({
       name: 'subheading',
       title: 'Subheading',
       type: 'string',
-      initialValue: 'Get the most cost-effective mainland or free zone setup with a partner you can trust.',
+      initialValue:
+        'Get the most cost-effective mainland or free zone setup with a partner you can trust.',
     }),
     defineField({
       name: 'description',
@@ -145,7 +155,8 @@ export const emirateHomeHero = defineType({
       title: 'Target Service Slug (for Contact Form)',
       type: 'string',
       initialValue: 'business-incorporation',
-      description: 'The service slug automatically selected in the contact form when clicking Request Information (e.g. business-incorporation).',
+      description:
+        'The service slug automatically selected in the contact form when clicking Request Information (e.g. business-incorporation).',
     }),
   ],
   preview: {
